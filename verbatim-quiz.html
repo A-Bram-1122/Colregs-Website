@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'self'">
+    <title>Verbatim Quiz - COLREGS Learning Portal</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/verbatim-quiz.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="logo">
+            <img src="reference/Photos/logo/logo.png" alt="Naval Ensign of the United Kingdom" class="logo-flag" width="57" height="57">
+            <a href="index.html" class="logo-text">COLREGS Master</a>
+        </div>
+        <div class="header-container">
+            <div class="nav-box">
+                <nav class="main-nav" role="navigation" aria-label="Main navigation">
+                    <ul>
+                        <li class="nav-dropdown">
+                            <button type="button" class="nav-dropdown-trigger" aria-expanded="false" aria-haspopup="true" aria-controls="dropdown-study" id="trigger-study">
+                                <span>Study</span>
+                                <svg class="nav-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polyline points="6 9 12 15 18 9"/>
+                                </svg>
+                            </button>
+                            <div class="nav-dropdown-menu" id="dropdown-study" role="menu" aria-labelledby="trigger-study">
+                                <a href="verbatim-quiz.html" role="menuitem">Rules Verbatim Quiz</a>
+                                <a href="lights-flags-quiz.html" role="menuitem">Signals, Flags & Buoys Quiz</a>
+                                <a href="understanding-quiz.html" role="menuitem">Rules Understanding Quiz</a>
+                            </div>
+                        </li>
+                        <li class="nav-dropdown">
+                            <button type="button" class="nav-dropdown-trigger" aria-expanded="false" aria-haspopup="true" aria-controls="dropdown-reference" id="trigger-reference">
+                                <span>Reference</span>
+                                <svg class="nav-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polyline points="6 9 12 15 18 9"/>
+                                </svg>
+                            </button>
+                            <div class="nav-dropdown-menu" id="dropdown-reference" role="menu" aria-labelledby="trigger-reference">
+                                <a href="rules-review.html" role="menuitem">Rules Review</a>
+                                <a href="lights-signals.html" role="menuitem">Signals, Flags & Buoys</a>
+                            </div>
+                        </li>
+                        <li class="nav-dropdown">
+                            <button type="button" class="nav-dropdown-trigger" aria-expanded="false" aria-haspopup="true" aria-controls="dropdown-progress" id="trigger-progress">
+                                <span>Progress</span>
+                                <svg class="nav-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polyline points="6 9 12 15 18 9"/>
+                                </svg>
+                            </button>
+                            <div class="nav-dropdown-menu" id="dropdown-progress" role="menu" aria-labelledby="trigger-progress">
+                                <a href="statistics.html" role="menuitem">Statistics</a>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="page-content">
+        <div class="quiz-layout">
+            <aside class="sidebar" id="rulesSidebar" role="complementary" aria-label="Rules navigation">
+                <div class="sidebar-header">
+                    <h2>Rules 1-19</h2>
+                    <button class="collapse-btn" id="collapseSidebar" aria-label="Toggle sidebar">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </button>
+                </div>
+                <ul class="rules-list" id="rulesList">
+                    <!-- Dynamically populated -->
+                </ul>
+            </aside>
+
+            <div class="main-quiz-area">
+                <div class="content-wrapper">
+                    <h1>Verbatim Quiz</h1>
+                    <p class="subtitle">Practice or test your knowledge of Rules 1–19, 34, 35 and Annex IV word-for-word</p>
+
+                    <div class="mode-selector" id="modeSelector">
+                        <h2>Select Quiz Mode</h2>
+                        <div class="mode-buttons">
+                            <div class="mode-card">
+                                <button class="btn btn-primary mode-btn" data-mode="practice" type="button">
+                                    <span class="mode-icon" aria-hidden="true">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+                                            <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+                                            <path d="M8 7h8"/>
+                                            <path d="M8 11h6"/>
+                                        </svg>
+                                    </span>
+                                    <span class="mode-title">Practice Mode</span>
+                                    <small>Choose difficulty level</small>
+                                </button>
+                            </div>
+                            <div class="mode-card">
+                                <button class="btn btn-secondary mode-btn" data-mode="exam" type="button">
+                                    <span class="mode-icon" aria-hidden="true">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/>
+                                            <rect x="8" y="2" width="8" height="4" rx="1"/>
+                                            <path d="M9 14h6"/>
+                                            <path d="M9 18h6"/>
+                                        </svg>
+                                    </span>
+                                    <span class="mode-title">Exam Mode</span>
+                                    <small>Scenario based questions</small>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="difficulty-selector hidden" id="difficultySelector">
+                        <h2>Select Difficulty</h2>
+                        <div class="difficulty-buttons">
+                            <div class="mode-card">
+                                <button class="btn btn-success difficulty-btn" data-level="beginner" type="button">
+                                    <span class="mode-icon" aria-hidden="true">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <path d="M2 20h20"/>
+                                            <path d="M5 20V8l7-4 7 4v12"/>
+                                        </svg>
+                                    </span>
+                                    <span class="mode-title">Beginner</span>
+                                    <small>First letter hints</small>
+                                </button>
+                            </div>
+                            <div class="mode-card">
+                                <button class="btn btn-primary difficulty-btn" data-level="intermediate" type="button">
+                                    <span class="mode-icon" aria-hidden="true">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <path d="M12 3v18"/>
+                                            <path d="M3 12h18"/>
+                                        </svg>
+                                    </span>
+                                    <span class="mode-title">Intermediate</span>
+                                    <small>10% of words shown</small>
+                                </button>
+                            </div>
+                            <div class="mode-card">
+                                <button class="btn btn-danger difficulty-btn" data-level="advanced" type="button">
+                                    <span class="mode-icon" aria-hidden="true">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+                                        </svg>
+                                    </span>
+                                    <span class="mode-title">Advanced</span>
+                                    <small>No hints - pure memory test</small>
+                                </button>
+                            </div>
+                        </div>
+                        <button class="btn btn-secondary mt-3" id="backToMode">Back to Mode Selection</button>
+                    </div>
+
+                    <div class="quiz-area hidden" id="quizArea">
+                        <div class="quiz-header">
+                            <h2 id="quizTitle">Practice - Beginner</h2>
+                            <button class="btn btn-secondary" id="exitQuiz">Exit Quiz</button>
+                        </div>
+
+                        <div class="current-rule-info" id="currentRuleInfo">
+                            <!-- Displays current rule being practiced -->
+                        </div>
+
+                        <div class="quiz-content" id="quizContent">
+                            <div class="question-area">
+                                <p class="instruction">Fill in the missing words (punctuation and capitalization are ignored):</p>
+                                <div class="completed-segments" id="completedSegmentsDisplay" aria-live="polite"></div>
+                                <div class="text-display" id="textDisplay">
+                                    <!-- Dynamically generated input fields -->
+                                </div>
+                            </div>
+
+                            <div class="quiz-controls">
+                                <div id="secondaryControls" class="quiz-controls-secondary hidden">
+                                    <button class="btn btn-secondary" id="tryAgain">Try Again</button>
+                                    <button class="btn btn-success" id="showAnswer">Show Correct Answer</button>
+                                </div>
+                                <button class="btn btn-primary" id="checkAnswer">Check</button>
+                                <button class="btn btn-secondary" id="clearAnswer">Clear</button>
+                                <button class="btn btn-secondary" id="prevQuestion">Prev</button>
+                                <button class="btn btn-primary" id="nextQuestion">Next</button>
+                            </div>
+
+                            <div class="feedback-area" id="feedbackArea">
+                                <!-- Feedback messages appear here -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="exam-results hidden" id="examResults">
+                        <h2>Exam Results</h2>
+                        <div class="results-summary" id="resultsSummary">
+                            <!-- Score and percentage -->
+                        </div>
+                        <div class="results-details" id="resultsDetails">
+                            <!-- Question by question breakdown -->
+                        </div>
+                        <div class="results-actions">
+                            <button class="btn btn-primary" id="retakeExam">Retake Exam</button>
+                            <button class="btn btn-secondary" id="backToHome">Back to Mode Selection</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-container">
+            <p>&copy; 2026 COLREGS Learning Portal. All rights reserved.</p>
+            <nav class="footer-nav" aria-label="Footer navigation">
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </div>
+    </footer>
+
+    <script src="scripts/main.js" defer></script>
+    <script src="scripts/colregs-data.js" defer></script>
+    <script src="scripts/verbatimScenarioData.js" defer></script>
+    <script src="scripts/verbatim-quiz.js" defer></script>
+</body>
+</html>
+

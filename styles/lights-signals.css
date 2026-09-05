@@ -1,0 +1,827 @@
+/* ==================== LIGHTS & SIGNALS STYLES ==================== */
+
+.page-content {
+    padding: 0 1.5rem;
+    max-width: 80rem;
+    margin: 0 auto;
+    margin-bottom: var(--main-footer-gap);
+}
+
+.content-wrapper {
+    background: transparent;
+    padding: 0;
+    display: flex;
+    gap: 0;
+    min-height: calc(100vh - 200px);
+}
+
+.content-nested-list {
+    margin: 0.5rem 0;
+    padding-left: 1.5rem;
+    line-height: 1.6;
+}
+
+/* ==================== SIDEBAR NAVIGATION ==================== */
+.lights-sidebar {
+    width: 280px;
+    background: rgba(30, 41, 59, 0.5);
+    backdrop-filter: blur(8px);
+    border-right: 1px solid rgba(51, 65, 85, 0.5);
+    overflow-y: auto;
+    position: sticky;
+    top: 0;
+    max-height: 100vh;
+}
+
+.sidebar-header-dark {
+    padding: 1.25rem 1.5rem;
+    background: rgba(15, 23, 42, 0.5);
+    border-bottom: 1px solid rgba(51, 65, 85, 0.5);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.sidebar-header-dark h2 {
+    color: var(--text-primary);
+    font-size: 1.25rem;
+    margin: 0;
+}
+
+.sidebar-header-dark p {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    margin: 0.5rem 0 0 0;
+}
+
+.category-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.category-item {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.category-button {
+    width: 100%;
+    padding: 1.25rem 1.5rem;
+    background: transparent;
+    border: none;
+    color: var(--text-body);
+    text-align: left;
+    font-size: 1.05rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: var(--transition);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.category-button:hover {
+    background: var(--bg-hover);
+    color: var(--text-primary);
+}
+
+.category-button.active {
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--text-primary);
+    border-left: 4px solid var(--accent-blue);
+}
+
+/* ==================== MAIN CONTENT AREA ==================== */
+.lights-main-content {
+    flex: 1;
+    background: rgba(30, 41, 59, 0.2);
+    padding: 2rem 2.5rem;
+    overflow-y: auto;
+}
+
+.content-header {
+    margin-bottom: 2rem;
+}
+
+.content-header h1 {
+    color: var(--text-primary);
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.subtitle {
+    color: var(--text-body);
+    font-size: 1.1rem;
+    margin-bottom: 0;
+}
+
+.section-intro {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+}
+
+/* ==================== VESSEL CATEGORIES ==================== */
+.vessel-categories {
+    margin-top: 0;
+}
+
+.category {
+    margin-bottom: 1rem;
+    border: 1px solid rgba(51, 65, 85, 0.5);
+    border-radius: 0.75rem;
+    overflow: hidden;
+    background: rgba(30, 41, 59, 0.3);
+}
+
+.category:hover {
+    border-color: rgba(56, 189, 248, 0.25);
+}
+
+.category-header {
+    width: 100%;
+    padding: 1.25rem 1.5rem;
+    background: transparent;
+    color: var(--text-primary);
+    border: none;
+    text-align: left;
+    font-size: 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background 0.15s ease-out, color 0.15s ease-out;
+}
+
+.category-header:hover {
+    background: rgba(255, 255, 255, 0.03);
+}
+
+.category-header .accordion-icon {
+    color: var(--text-muted);
+}
+
+.category-content {
+    background: rgba(15, 23, 42, 0.3);
+    overflow: hidden;
+}
+
+/* ==================== LIGHT CARDS ==================== */
+.lights-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.light-card {
+    background: rgba(30, 41, 59, 0.3);
+    backdrop-filter: blur(8px);
+    border-radius: 0.75rem;
+    padding: 1.5rem 2rem;
+    border: 1px solid rgba(51, 65, 85, 0.5);
+}
+
+.light-card h3 {
+    color: var(--text-primary);
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+}
+
+.light-diagrams {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.diagram {
+    background: rgba(15, 23, 42, 0.5);
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.diagram h4 {
+    text-align: center;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+}
+
+.diagram img.light-diagram-img,
+.diagram .light-svg {
+    width: 100%;
+    height: 180px;
+    object-fit: contain;
+    background: var(--bg-body);
+    border-radius: var(--border-radius);
+    padding: 0.5rem;
+}
+
+
+.light-description {
+    background: rgba(15, 23, 42, 0.5);
+    padding: 1.25rem 1.5rem;
+    border-radius: 0.5rem;
+    border-left: 4px solid var(--accent-blue);
+    border: 1px solid rgba(51, 65, 85, 0.5);
+}
+
+.light-description p {
+    margin-bottom: 0.75rem;
+    line-height: 1.8;
+    color: var(--text-body);
+}
+
+.light-description p:last-child {
+    margin-bottom: 0;
+}
+
+.light-description strong {
+    color: var(--text-primary);
+    font-weight: 600;
+}
+
+/* ==================== FLAGS GRID ==================== */
+.flags-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.flag-card {
+    background: rgba(30, 41, 59, 0.3);
+    backdrop-filter: blur(8px);
+    border-radius: 0.75rem;
+    padding: 1.25rem 1.5rem;
+    transition: all 0.2s ease;
+    border: 1px solid rgba(51, 65, 85, 0.5);
+}
+
+.flag-card:hover {
+    border-color: rgba(56, 189, 248, 0.3);
+    background: rgba(30, 41, 59, 0.5);
+}
+
+.flag-display {
+    width: 100%;
+    height: 160px;
+    border-radius: var(--border-radius);
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--border-normal);
+}
+
+.flag-display .flag-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+.flag-card[data-flag="O"] .flag-img {
+    transform: rotate(-90deg);
+}
+
+.flag-info h3 {
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+    font-size: 1.3rem;
+}
+
+.flag-phonetic {
+    color: var(--text-muted);
+    font-style: italic;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+}
+
+.flag-meaning {
+    color: var(--text-body);
+    line-height: 1.6;
+    padding: 0;
+    background: var(--bg-sidebar);
+    border-radius: var(--border-radius);
+    border-left: 3px solid var(--accent-blue);
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.meaning-block {
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid rgba(51, 65, 85, 0.5);
+}
+
+.meaning-block:last-child {
+    border-bottom: none;
+}
+
+.flag-meaning strong {
+    color: var(--text-primary);
+}
+
+/* ==================== CONTENT SECTIONS ==================== */
+.content-section {
+    display: none;
+}
+
+.content-section.active {
+    display: block;
+}
+
+/* ==================== SHIP SHAPES ==================== */
+.shapes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.shape-card {
+    background: rgba(30, 41, 59, 0.3);
+    border: 1px solid rgba(51, 65, 85, 0.5);
+    border-radius: 0.75rem;
+    padding: 1.25rem 1.5rem;
+    text-align: center;
+    transition: all 0.2s ease;
+}
+
+.shape-card:hover {
+    border-color: rgba(56, 189, 248, 0.3);
+    background: rgba(30, 41, 59, 0.5);
+}
+
+.shape-card h3 {
+    color: var(--text-primary);
+    font-size: 1.2rem;
+    margin-bottom: 0.75rem;
+}
+
+.shape-visual {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 1rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.shape-visual img.shape-img {
+    width: 100px;
+    height: 100px;
+    min-width: 100px;
+    min-height: 100px;
+    max-width: 100px;
+    max-height: 100px;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+/* Ball shape */
+.ball-shape {
+    width: 60px;
+    height: 60px;
+    background: #000000;
+    border-radius: 50%;
+    margin: 20px auto;
+    border: 2px solid var(--text-muted);
+}
+
+/* Cone shape - apex down, solid black for consistent rendering across browsers */
+.cone-shape {
+    width: 60px;
+    height: 60px;
+    margin: 20px auto;
+    background: #000000;
+    clip-path: polygon(0% 0%, 100% 0%, 50% 100%);
+    -webkit-clip-path: polygon(0% 0%, 100% 0%, 50% 100%);
+}
+
+/* Diamond shape - proper square rotated 45 degrees */
+.diamond-shape {
+    width: 50px;
+    height: 50px;
+    background: #000000;
+    transform: rotate(45deg);
+    margin: 25px auto;
+    border: 2px solid var(--text-muted);
+    box-sizing: border-box;
+}
+
+/* Cylinder shape */
+.cylinder-shape {
+    width: 40px;
+    height: 80px;
+    background: #000000;
+    border-radius: 8px;
+    margin: 10px auto;
+    border: 2px solid var(--text-muted);
+}
+
+/* Double ball */
+.double-ball-shape {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding: 10px 0;
+}
+
+.double-ball-shape::before,
+.double-ball-shape::after {
+    content: '';
+    width: 40px;
+    height: 40px;
+    background: #000000;
+    border-radius: 50%;
+    border: 2px solid var(--text-muted);
+}
+
+/* Ball-Diamond-Ball */
+.ball-diamond-ball-shape {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    padding: 5px 0;
+}
+
+.ball-diamond-ball-shape::before {
+    content: '';
+    width: 30px;
+    height: 30px;
+    background: #000000;
+    border-radius: 50%;
+    border: 2px solid var(--text-muted);
+}
+
+.ball-diamond-ball-shape .middle-diamond {
+    width: 25px;
+    height: 25px;
+    background: #000000;
+    transform: rotate(45deg);
+    border: 2px solid var(--text-muted);
+    box-sizing: border-box;
+    flex-shrink: 0;
+}
+
+.ball-diamond-ball-shape::after {
+    content: '';
+    width: 30px;
+    height: 30px;
+    background: #000000;
+    border-radius: 50%;
+    border: 2px solid var(--text-muted);
+}
+
+.shape-meaning {
+    color: var(--accent-blue);
+    font-size: 0.95rem;
+    margin: 0.75rem 0;
+}
+
+.shape-meaning strong {
+    color: var(--text-primary);
+}
+
+.shape-description {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    line-height: 1.5;
+}
+
+/* ==================== RESPONSIVE DESIGN ==================== */
+@media (max-width: 1200px) {
+    .content-wrapper {
+        flex-direction: column;
+    }
+    
+    .lights-sidebar {
+        width: 100%;
+        position: static;
+        max-height: none;
+        border-right: none;
+        border-bottom: 1px solid rgba(51, 65, 85, 0.5);
+    }
+    
+    .accordion-content.active .accordion-body {
+        max-width: 100%;
+        overflow-x: auto;
+    }
+}
+
+@media (max-width: 1024px) {
+    .light-diagrams {
+        grid-template-columns: 1fr;
+    }
+    
+    .flags-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    /* Ensure light diagrams are responsive */
+    .diagram img.light-diagram-img,
+    .diagram .light-svg {
+        min-width: 300px;
+        width: 100%;
+    }
+    
+    /* Make light cards scrollable if needed */
+    .light-card {
+        overflow-x: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .category-header {
+        font-size: 1.1rem;
+        padding: 1rem;
+    }
+    
+    .light-card {
+        padding: 1rem;
+    }
+    
+    .light-card h3 {
+        font-size: 1.2rem;
+    }
+    
+    .flags-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .lights-main-content {
+        padding: 1rem;
+    }
+    
+    /* Make diagrams stack better on mobile */
+    .light-diagrams {
+        gap: 0.75rem;
+    }
+    
+    .diagram {
+        padding: 0.5rem;
+    }
+    
+    
+    .accordion-body {
+        padding-inline: 1rem;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .accordion-content.active .accordion-body {
+        padding-block: 1rem;
+    }
+}
+
+/* Handle very narrow screens (half-screen or mobile portrait) */
+@media (max-width: 600px) {
+    .lights-main-content {
+        padding: 0.75rem;
+    }
+    
+    .light-card {
+        padding: 0.75rem;
+    }
+    
+    .content-header h1 {
+        font-size: 1.75rem;
+    }
+    
+    .subtitle {
+        font-size: 0.95rem;
+    }
+    
+    /* Make diagram containers scrollable horizontally if needed */
+    .diagram {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+    
+    .diagram img.light-diagram-img,
+    .diagram .light-svg {
+        min-width: 350px;
+    }
+}
+
+/* ==================== IALA REGIONS ==================== */
+.iala-map-wrapper {
+    margin-top: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.iala-map-img {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+    border: 1px solid rgba(51, 65, 85, 0.5);
+}
+
+.iala-map-img[src=""] {
+    display: none;
+}
+
+.iala-notes {
+    margin-top: 1.5rem;
+}
+
+.iala-notes p {
+    margin: 0.5rem 0;
+    line-height: 1.6;
+}
+
+.iala-chart-examples {
+    margin-top: 2rem;
+}
+
+.iala-chart-examples h3 {
+    margin-bottom: 1rem;
+    color: var(--text-primary);
+    font-size: 1.15rem;
+}
+
+.iala-chart-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    align-items: start;
+}
+
+.iala-chart-item {
+    margin: 0;
+}
+
+.iala-chart-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+    border: 1px solid rgba(51, 65, 85, 0.5);
+}
+
+.iala-chart-item figcaption {
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    font-weight: 600;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .iala-chart-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ==================== LATERAL MARKS REGION TOGGLE ==================== */
+.lateral-marks-header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.75rem 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.lateral-marks-header h3 {
+    margin: 0;
+}
+
+.region-toggle {
+    display: flex;
+    position: relative;
+    background: rgba(51, 65, 85, 0.25);
+    border-radius: 999px;
+    padding: 3px;
+}
+
+.region-slider {
+    position: absolute;
+    top: 3px;
+    bottom: 3px;
+    left: 3px;
+    width: calc(50% - 3px);
+    background: rgba(30, 64, 175, 0.7);
+    border-radius: 999px;
+    transition: transform 0.25s ease;
+    pointer-events: none;
+}
+
+.region-toggle[data-active="b"] .region-slider {
+    transform: translateX(calc(100% + 3px));
+}
+
+.region-btn {
+    position: relative;
+    z-index: 1;
+    flex: 1;
+    min-width: 78px;
+    white-space: nowrap;
+    padding: 0.35rem 0.75rem;
+    font-size: 0.9rem;
+    font-family: inherit;
+    background: transparent;
+    color: var(--text-light, #94a3b8);
+    border: none;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.region-btn:hover {
+    color: var(--text-light, #e2e8f0);
+}
+
+.region-btn.active {
+    color: #fff;
+}
+
+.lateral-marks-content.hidden {
+    display: none;
+}
+
+/* ==================== BUOY IMAGES ==================== */
+#buoys-section .light-description {
+    margin-bottom: 0;
+}
+
+#buoys-section .light-description + .light-diagrams,
+#buoys-section .light-diagrams {
+    margin-top: 0;
+    margin-bottom: 1px;
+}
+
+#buoys-section .light-description + .light-diagrams {
+    border-top: 1px solid rgba(51, 65, 85, 0.5);
+    padding-top: 0.5rem;
+}
+
+#buoys-section .light-diagrams .diagram {
+    padding: 0;
+    background: transparent;
+    border: 1px solid rgba(51, 65, 85, 0.5);
+}
+
+#buoys-section .diagram h4 {
+    margin: 0.35rem 0 0;
+    padding: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 1.25rem;
+    line-height: 1.25;
+}
+
+#buoys-section .diagram img.buoy-img {
+    height: auto;
+    width: 100%;
+    max-width: 100%;
+    max-height: 360px;
+    display: block;
+    padding: 0;
+    margin: 0;
+    background: transparent;
+    object-fit: contain;
+    object-position: top center;
+}
+
+#buoys-section .diagram h4 + img.buoy-img {
+    margin-top: 3mm;
+}
+
+/* Lateral marker cards with headings keep fixed crop fill */
+#buoys-section .buoy-subsection .light-diagrams .diagram:has(h4) img.buoy-img {
+    height: 200px;
+    object-fit: cover;
+    object-position: center center;
+}
+
+/* Non-lateral buoy categories always show full image in the same 360px box */
+#buoys-section .category:not(:first-child) .light-diagrams .diagram img.buoy-img {
+    height: 360px;
+    object-fit: contain;
+    object-position: center center;
+}
+
+/* ==================== BUOY SUBSECTIONS ==================== */
+.buoy-subsection {
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(51, 65, 85, 0.3);
+}
+
+.buoy-subsection h4 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1rem;
+}
+
+.buoy-subsection .subsection-desc {
+    margin: 0 0 0.5rem 0;
+}

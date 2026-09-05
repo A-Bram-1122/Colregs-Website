@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'self'">
+    <title>Signals, Flags & Buoys Quiz - COLREGS Learning Portal</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/quiz.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="logo">
+            <img src="reference/Photos/logo/logo.png" alt="Naval Ensign of the United Kingdom" class="logo-flag" width="57" height="57">
+            <a href="index.html" class="logo-text">COLREGS Master</a>
+        </div>
+        <div class="header-container">
+            <div class="nav-box">
+                <nav class="main-nav" role="navigation" aria-label="Main navigation">
+                    <ul>
+                        <li class="nav-dropdown">
+                            <button type="button" class="nav-dropdown-trigger" aria-expanded="false" aria-haspopup="true" aria-controls="dropdown-study" id="trigger-study">
+                                <span>Study</span>
+                                <svg class="nav-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polyline points="6 9 12 15 18 9"/>
+                                </svg>
+                            </button>
+                            <div class="nav-dropdown-menu" id="dropdown-study" role="menu" aria-labelledby="trigger-study">
+                                <a href="verbatim-quiz.html" role="menuitem">Rules Verbatim Quiz</a>
+                                <a href="lights-flags-quiz.html" role="menuitem">Signals, Flags & Buoys Quiz</a>
+                                <a href="understanding-quiz.html" role="menuitem">Rules Understanding Quiz</a>
+                            </div>
+                        </li>
+                        <li class="nav-dropdown">
+                            <button type="button" class="nav-dropdown-trigger" aria-expanded="false" aria-haspopup="true" aria-controls="dropdown-reference" id="trigger-reference">
+                                <span>Reference</span>
+                                <svg class="nav-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polyline points="6 9 12 15 18 9"/>
+                                </svg>
+                            </button>
+                            <div class="nav-dropdown-menu" id="dropdown-reference" role="menu" aria-labelledby="trigger-reference">
+                                <a href="rules-review.html" role="menuitem">Rules Review</a>
+                                <a href="lights-signals.html" role="menuitem">Signals, Flags & Buoys</a>
+                            </div>
+                        </li>
+                        <li class="nav-dropdown">
+                            <button type="button" class="nav-dropdown-trigger" aria-expanded="false" aria-haspopup="true" aria-controls="dropdown-progress" id="trigger-progress">
+                                <span>Progress</span>
+                                <svg class="nav-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polyline points="6 9 12 15 18 9"/>
+                                </svg>
+                            </button>
+                            <div class="nav-dropdown-menu" id="dropdown-progress" role="menu" aria-labelledby="trigger-progress">
+                                <a href="statistics.html" role="menuitem">Statistics</a>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="page-content">
+        <div class="content-wrapper">
+            <div class="quiz-intro" id="quizIntro">
+                <h1>Signals, Flags & Buoys Quiz</h1>
+                <p class="subtitle">Test your knowledge of navigation lights and maritime signal flags</p>
+                <div class="quiz-info">
+                    <p><strong>Format:</strong> Multiple-choice questions</p>
+                    <p><strong>Number of questions:</strong></p>
+                    <div class="question-count-selector">
+                        <label><input type="radio" name="questionCount" value="10"> 10</label>
+                        <label><input type="radio" name="questionCount" value="20" checked> 20</label>
+                        <label><input type="radio" name="questionCount" value="30"> 30</label>
+                    </div>
+                    <p class="quiz-topic-heading"><strong>Question types</strong></p>
+                    <div class="question-count-selector quiz-topic-selector" role="group" aria-label="Question types">
+                        <input type="checkbox" id="topic-lights" name="quizTopic" value="lights" data-topic="lights" checked>
+                        <label for="topic-lights">Lights</label>
+                        <input type="checkbox" id="topic-flags" name="quizTopic" value="flags" data-topic="flags" checked>
+                        <label for="topic-flags">Flags</label>
+                        <input type="checkbox" id="topic-shapes" name="quizTopic" value="shapes" data-topic="shapes" checked>
+                        <label for="topic-shapes">Day shapes</label>
+                        <input type="checkbox" id="topic-buoys" name="quizTopic" value="buoys" data-topic="buoys" checked>
+                        <label for="topic-buoys">IALA buoys</label>
+                    </div>
+                    <p><strong>Topics:</strong> Navigation lights, international &amp; NATO signal flags, day shapes, and IALA Maritime Buoyage System</p>
+                    <p><strong>Passing Score:</strong> 70%</p>
+                </div>
+                <button type="button" class="btn btn-primary btn-lg" id="startQuiz">Start Quiz</button>
+            </div>
+
+            <div class="quiz-container hidden" id="quizContainer">
+                <div class="quiz-progress">
+                    <div class="progress-bar">
+                        <svg class="progress-bar-svg" viewBox="0 0 100 12" preserveAspectRatio="none" aria-hidden="true">
+                            <rect id="progressFill" class="progress-fill-rect" x="0" y="0" width="0" height="12" rx="0"/>
+                        </svg>
+                    </div>
+                    <p class="progress-text">Question <span id="currentQuestion">1</span> of <span id="totalQuestions">30</span></p>
+                </div>
+
+                <div class="question-container" id="questionContainer">
+                    <!-- Question dynamically populated -->
+                </div>
+
+                <div class="quiz-navigation">
+                    <button class="btn btn-secondary" id="prevQuestion" disabled>Previous</button>
+                    <button class="btn btn-primary" id="submitAnswer">Submit Answer</button>
+                    <button class="btn btn-primary hidden" id="nextQuestion">Next Question</button>
+                </div>
+
+                <div class="question-feedback hidden" id="questionFeedback">
+                    <!-- Feedback appears here -->
+                </div>
+            </div>
+
+            <div class="quiz-results hidden" id="quizResults">
+                <h2>Quiz Complete!</h2>
+                <div class="results-summary" id="resultsSummary">
+                    <!-- Results populated here -->
+                </div>
+                <div class="results-breakdown" id="resultsBreakdown">
+                    <!-- Detailed breakdown -->
+                </div>
+                <div class="results-actions">
+                    <button class="btn btn-primary" id="retakeQuiz">Retake Quiz</button>
+                    <a href="statistics.html" class="btn btn-secondary">View All Statistics</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-container">
+            <p>&copy; 2026 COLREGS Learning Portal. All rights reserved.</p>
+            <nav class="footer-nav" aria-label="Footer navigation">
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </div>
+    </footer>
+
+    <script src="scripts/main.js" defer></script>
+    <script src="scripts/data/review-and-lights-data.js" defer></script>
+    <script src="scripts/data/lights-data.js" defer></script>
+    <script src="scripts/data/day-shapes-data.js" defer></script>
+    <script src="scripts/data/day-shapes-ship-photos.js" defer></script>
+    <script src="scripts/data/iala-buoys-data.js" defer></script>
+    <script src="scripts/data/iala-chart-data.js" defer></script>
+    <script src="scripts/data/iala-buoy-photos.js" defer></script>
+    <script src="scripts/quiz/quiz-utils.js" defer></script>
+    <script src="scripts/quiz/lights-quiz-questions.js" defer></script>
+    <script src="scripts/quiz/flags-quiz-questions.js" defer></script>
+    <script src="scripts/quiz/day-shapes-quiz-questions.js" defer></script>
+    <script src="scripts/quiz/buoys-quiz-questions.js" defer></script>
+    <script src="scripts/quiz/lights-flags-quiz.js" defer></script>
+</body>
+</html>
+

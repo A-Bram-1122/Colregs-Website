@@ -1,0 +1,167 @@
+/* ==================== RULES REVIEW STYLES ==================== */
+
+.content-wrapper h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.content-wrapper .subtitle {
+    color: var(--text-muted);
+    margin-bottom: 2rem;
+    font-size: 1rem;
+}
+
+.search-container {
+    margin-bottom: 2rem;
+}
+
+.search-container input[type="search"] {
+    width: 100%;
+    max-width: 100%;
+    padding: 0.875rem 1.25rem;
+    font-size: 1rem;
+    border: 1px solid rgba(51, 65, 85, 0.5);
+    border-radius: 0.75rem;
+    background: rgba(15, 23, 42, 0.5);
+    color: var(--text-primary);
+}
+
+.search-container input[type="search"]::placeholder {
+    color: var(--text-muted);
+}
+
+.search-container input[type="search"]:focus {
+    border-color: var(--accent-blue);
+    box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.15);
+}
+
+.rules-load-error {
+    padding: 2rem;
+    color: #dc2626;
+    background: #fee2e2;
+    border-radius: 8px;
+    margin: 1rem 0;
+}
+
+.accordion {
+    margin-top: 1.5rem;
+}
+
+/* Sleek accordion - matches home card style */
+.rule-accordion {
+    margin-bottom: 0.75rem;
+    background: rgba(30, 41, 59, 0.3);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(51, 65, 85, 0.5);
+    border-radius: 0.75rem;
+    overflow: hidden;
+}
+
+.rule-accordion:hover {
+    border-color: rgba(56, 189, 248, 0.25);
+}
+
+.rule-header {
+    background: transparent;
+    padding: 1.25rem 1.5rem;
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.rule-header:hover,
+.rule-header:focus {
+    background: rgba(255, 255, 255, 0.03);
+}
+
+.rule-header.active {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.rule-content {
+    background: rgba(15, 23, 42, 0.3);
+}
+
+.rule-summary {
+    background: rgba(56, 189, 248, 0.08);
+    padding: 1rem 1.25rem;
+    border-radius: 0.5rem;
+    border: 1px solid rgba(56, 189, 248, 0.2);
+    margin-bottom: 1.5rem;
+    color: var(--text-body);
+}
+
+.rule-summary strong {
+    color: var(--text-primary);
+}
+
+/* Nested sections accordion */
+.sections-accordion {
+    margin-top: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    padding-top: 1rem;
+}
+
+.section-accordion {
+    margin-bottom: 0.5rem;
+    background: rgba(30, 41, 59, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+
+.section-header {
+    background: transparent;
+    padding: 0.875rem 1.25rem;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--text-body);
+}
+
+.section-header:hover {
+    background: rgba(255, 255, 255, 0.03);
+}
+
+.section-header.active {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.section-content {
+    background: transparent;
+}
+
+.rule-verbatim {
+    line-height: 1.8;
+    color: var(--text-body);
+    margin: 0;
+    white-space: pre-line;
+}
+
+.no-results {
+    text-align: center;
+    padding: 3rem;
+    color: var(--text-muted);
+    font-size: 1.2rem;
+}
+
+.no-results svg {
+    margin-bottom: 1rem;
+    opacity: 0.5;
+}
+
+.no-results p {
+    color: var(--text-muted);
+}
+
+/* Highlighting search matches */
+.highlight {
+    background: rgba(251, 191, 36, 0.4);
+    padding: 0.125rem 0.25rem;
+    border-radius: 3px;
+    font-weight: 600;
+    color: #fbbf24;
+}
+
+/* ==================== RESPONSIVE DESIGN ==================== */
+

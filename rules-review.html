@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'self'">
+    <title>Rules Review - COLREGS Learning Portal</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/rules-review.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="logo">
+            <img src="reference/Photos/logo/logo.png" alt="Naval Ensign of the United Kingdom" class="logo-flag" width="57" height="57">
+            <a href="index.html" class="logo-text">COLREGS Master</a>
+        </div>
+        <div class="header-container">
+            <div class="nav-box">
+                <nav class="main-nav" role="navigation" aria-label="Main navigation">
+                    <ul>
+                        <li class="nav-dropdown">
+                            <button type="button" class="nav-dropdown-trigger" aria-expanded="false" aria-haspopup="true" aria-controls="dropdown-study" id="trigger-study">
+                                <span>Study</span>
+                                <svg class="nav-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polyline points="6 9 12 15 18 9"/>
+                                </svg>
+                            </button>
+                            <div class="nav-dropdown-menu" id="dropdown-study" role="menu" aria-labelledby="trigger-study">
+                                <a href="verbatim-quiz.html" role="menuitem">Rules Verbatim Quiz</a>
+                                <a href="lights-flags-quiz.html" role="menuitem">Signals, Flags & Buoys Quiz</a>
+                                <a href="understanding-quiz.html" role="menuitem">Rules Understanding Quiz</a>
+                            </div>
+                        </li>
+                        <li class="nav-dropdown">
+                            <button type="button" class="nav-dropdown-trigger" aria-expanded="false" aria-haspopup="true" aria-controls="dropdown-reference" id="trigger-reference">
+                                <span>Reference</span>
+                                <svg class="nav-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polyline points="6 9 12 15 18 9"/>
+                                </svg>
+                            </button>
+                            <div class="nav-dropdown-menu" id="dropdown-reference" role="menu" aria-labelledby="trigger-reference">
+                                <a href="rules-review.html" role="menuitem">Rules Review</a>
+                                <a href="lights-signals.html" role="menuitem">Signals, Flags & Buoys</a>
+                            </div>
+                        </li>
+                        <li class="nav-dropdown">
+                            <button type="button" class="nav-dropdown-trigger" aria-expanded="false" aria-haspopup="true" aria-controls="dropdown-progress" id="trigger-progress">
+                                <span>Progress</span>
+                                <svg class="nav-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polyline points="6 9 12 15 18 9"/>
+                                </svg>
+                            </button>
+                            <div class="nav-dropdown-menu" id="dropdown-progress" role="menu" aria-labelledby="trigger-progress">
+                                <a href="statistics.html" role="menuitem">Statistics</a>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="page-content">
+        <div class="content-wrapper">
+            <h1>Rules Review</h1>
+            <p class="subtitle">Browse all 38 COLREGS rules and Annexes I-IV with verbatim text and plain-language summaries</p>
+
+            <div class="search-container">
+                <label for="searchRules" class="visually-hidden">Search rules</label>
+                <input 
+                    type="search" 
+                    id="searchRules" 
+                    placeholder="Search by rule number or keyword..."
+                    aria-label="Search rules by number or keyword"
+                    maxlength="500"
+                >
+            </div>
+
+            <div class="accordion" id="rulesAccordion" role="region" aria-label="COLREGS Rules">
+                <!-- Rules dynamically populated -->
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-container">
+            <p>&copy; 2026 COLREGS Learning Portal. All rights reserved.</p>
+            <nav class="footer-nav" aria-label="Footer navigation">
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </div>
+    </footer>
+
+    <script src="scripts/main.js" defer></script>
+    <script src="scripts/colregs-data.js" defer></script>
+    <script src="scripts/rules-review.js" defer></script>
+</body>
+</html>
+

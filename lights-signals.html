@@ -1,0 +1,924 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'self'">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signals, Flags & Buoys - COLREGS Learning Portal</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/lights-signals.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="logo">
+            <img src="reference/Photos/logo/logo.png" alt="Naval Ensign of the United Kingdom" class="logo-flag" width="57" height="57">
+            <a href="index.html" class="logo-text">COLREGS Master</a>
+        </div>
+        <div class="header-container">
+            <div class="nav-box">
+                <nav class="main-nav" role="navigation" aria-label="Main navigation">
+                    <ul>
+                        <li class="nav-dropdown">
+                            <button type="button" class="nav-dropdown-trigger" aria-expanded="false" aria-haspopup="true" aria-controls="dropdown-study" id="trigger-study">
+                                <span>Study</span>
+                                <svg class="nav-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polyline points="6 9 12 15 18 9"/>
+                                </svg>
+                            </button>
+                            <div class="nav-dropdown-menu" id="dropdown-study" role="menu" aria-labelledby="trigger-study">
+                                <a href="verbatim-quiz.html" role="menuitem">Rules Verbatim Quiz</a>
+                                <a href="lights-flags-quiz.html" role="menuitem">Signals, Flags & Buoys Quiz</a>
+                                <a href="understanding-quiz.html" role="menuitem">Rules Understanding Quiz</a>
+                            </div>
+                        </li>
+                        <li class="nav-dropdown">
+                            <button type="button" class="nav-dropdown-trigger" aria-expanded="false" aria-haspopup="true" aria-controls="dropdown-reference" id="trigger-reference">
+                                <span>Reference</span>
+                                <svg class="nav-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polyline points="6 9 12 15 18 9"/>
+                                </svg>
+                            </button>
+                            <div class="nav-dropdown-menu" id="dropdown-reference" role="menu" aria-labelledby="trigger-reference">
+                                <a href="rules-review.html" role="menuitem">Rules Review</a>
+                                <a href="lights-signals.html" role="menuitem">Signals, Flags & Buoys</a>
+                            </div>
+                        </li>
+                        <li class="nav-dropdown">
+                            <button type="button" class="nav-dropdown-trigger" aria-expanded="false" aria-haspopup="true" aria-controls="dropdown-progress" id="trigger-progress">
+                                <span>Progress</span>
+                                <svg class="nav-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polyline points="6 9 12 15 18 9"/>
+                                </svg>
+                            </button>
+                            <div class="nav-dropdown-menu" id="dropdown-progress" role="menu" aria-labelledby="trigger-progress">
+                                <a href="statistics.html" role="menuitem">Statistics</a>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="page-content">
+        <div class="content-wrapper">
+            <!-- Sidebar Navigation -->
+            <aside class="lights-sidebar" role="complementary" aria-label="Navigation sections">
+                <div class="sidebar-header-dark">
+                    <h2>Signals, Flags & Buoys</h2>
+                    <p>Navigation reference guide</p>
+                </div>
+                <ul class="category-list">
+                    <li class="category-item">
+                        <button class="category-button active" data-section="flags-signals">
+                            <span>Signal Flags</span>
+                            <span>→</span>
+                        </button>
+                    </li>
+                    <li class="category-item">
+                        <button class="category-button" data-section="ship-lights">
+                            <span>Ship Lights</span>
+                            <span>→</span>
+                        </button>
+                    </li>
+                    <li class="category-item">
+                        <button class="category-button" data-section="shapes">
+                            <span>Ship Day Shapes</span>
+                            <span>→</span>
+                        </button>
+                    </li>
+                    <li class="category-item">
+                        <button class="category-button" data-section="iala">
+                            <span>IALA Regions</span>
+                            <span>→</span>
+                        </button>
+                    </li>
+                    <li class="category-item">
+                        <button class="category-button" data-section="buoys">
+                            <span>Buoys</span>
+                            <span>→</span>
+                        </button>
+                    </li>
+                </ul>
+            </aside>
+
+            <!-- Main Content Area -->
+            <div class="lights-main-content">
+                <div class="content-section" id="ship-lights-section">
+                    <div class="content-header">
+                        <h1>Navigation Light Configurations</h1>
+                        <p class="subtitle">Learn to identify vessels by their navigation light patterns from different angles</p>
+                    </div>
+
+                    <div class="vessel-categories">
+                        <div class="category">
+                            <button class="category-header accordion-header">
+                                <span>Power-Driven Vessels</span>
+                                <span class="accordion-icon">▼</span>
+                            </button>
+                            <div class="category-content accordion-content">
+                                <div class="accordion-body">
+                                    <div class="lights-grid">
+                                        <article class="light-card">
+                                            <h3>Power-Driven Vessel Underway</h3>
+                                            <div class="light-diagrams">
+                                                <div class="diagram">
+                                                    <h4>Front</h4>
+                                                    <img data-diagram="power-driven-vessel-underway-front" alt="Power-Driven Vessel Underway - Front View" class="light-diagram-img" width="240" height="180" loading="lazy">
+                                                </div>
+                                                <div class="diagram">
+                                                    <h4>Port</h4>
+                                                    <img data-diagram="power-driven-vessel-underway-starboard" alt="Power-Driven Vessel Underway - Port View" class="light-diagram-img" loading="lazy">
+                                                </div>
+                                                <div class="diagram">
+                                                    <h4>Aft</h4>
+                                                    <img data-diagram="power-driven-vessel-underway-aft" alt="Power-Driven Vessel Underway - Aft View" class="light-diagram-img" loading="lazy">
+                                                </div>
+                                            </div>
+                                            <div class="light-description">
+                                                <p><strong>Configuration:</strong> Masthead light (white, forward, 225° arc), sidelights (red port/green starboard, 112.5° each), stern light (white, aft, 135° arc)</p>
+                                                <p><strong>When Displayed:</strong> All power-driven vessels underway at night or in restricted visibility (Rule 23)</p>
+                                                <p><strong>Visibility Range:</strong> Masthead light 5-6 NM (3 NM for vessels <50m), sidelights 2-3 NM, stern light 2-3 NM</p>
+                                            </div>
+                                        </article>
+
+                                        <article class="light-card">
+                                            <h3>Power-Driven Vessel Over 50m</h3>
+                                            <div class="light-diagrams">
+                                                <div class="diagram">
+                                                    <h4>Front</h4>
+                                                    <img data-diagram="power-driven-vessel-over-50m-front" alt="Power-Driven Vessel Over 50m - Front View" class="light-diagram-img" loading="lazy">
+                                                </div>
+                                                <div class="diagram">
+                                                    <h4>Port</h4>
+                                                    <img data-diagram="power-driven-vessel-over-50m-starboard" alt="Power-Driven Vessel Over 50m - Port View" class="light-diagram-img" loading="lazy">
+                                                </div>
+                                                <div class="diagram">
+                                                    <h4>Aft</h4>
+                                                    <img data-diagram="power-driven-vessel-over-50m-aft" alt="Power-Driven Vessel Over 50m - Aft View" class="light-diagram-img" loading="lazy">
+                                                </div>
+                                            </div>
+                                            <div class="light-description">
+                                                <p><strong>Configuration:</strong> Two white masthead lights in a vertical line (aft higher than forward), red port/green starboard sidelights, white stern light</p>
+                                                <p><strong>When Displayed:</strong> Power-driven vessels ≥50 meters in length underway (Rule 23(a)(i))</p>
+                                                <p><strong>Key Feature:</strong> The second (aft) masthead light MUST be at least 4.5m higher than the forward light and positioned abaft (behind) it. This is the distinguishing feature of large vessels.</p>
+                                                <p><strong>Visibility:</strong> Masthead lights 6 NM, sidelights 3 NM, stern light 3 NM</p>
+                                            </div>
+                                        </article>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="category">
+                            <button class="category-header accordion-header">
+                                <span>Sailing Vessels</span>
+                                <span class="accordion-icon">▼</span>
+                            </button>
+                            <div class="category-content accordion-content">
+                                <div class="accordion-body">
+                                    <article class="light-card">
+                                        <h3>Sailing Vessel Underway</h3>
+                                        <div class="light-diagrams">
+                                            <div class="diagram">
+                                                <h4>Front</h4>
+                                                <img data-diagram="sailing-vessel-underway-front" alt="Sailing Vessel Underway - Front View" class="light-diagram-img" loading="lazy">
+                                            </div>
+                                            <div class="diagram">
+                                                <h4>Port</h4>
+                                                <img data-diagram="sailing-vessel-underway-starboard" alt="Sailing Vessel Underway - Port View" class="light-diagram-img" loading="lazy">
+                                            </div>
+                                            <div class="diagram">
+                                                <h4>Aft</h4>
+                                                <img data-diagram="sailing-vessel-underway-aft" alt="Sailing Vessel Underway - Aft View" class="light-diagram-img" loading="lazy">
+                                            </div>
+                                        </div>
+                                        <div class="light-description">
+                                            <p><strong>Configuration:</strong> Red port and green starboard sidelights (112.5° each), white stern light (135°). NO masthead light.</p>
+                                            <p><strong>When Displayed:</strong> Sailing vessels underway NOT using propelling machinery (Rule 25(a))</p>
+                                            <p><strong>Key Distinction:</strong> The ABSENCE of a white masthead light distinguishes sailing vessels from power-driven vessels. If the engine is used, the vessel must display a cone apex-down and show power-driven vessel lights.</p>
+                                            <p><strong>Visibility:</strong> Sidelights 2 NM (1 NM for vessels <20m), stern light 2 NM</p>
+                                            <p><strong>Alternative (vessels <20m):</strong> May carry combined sidelights and stern light in a single tricolor lantern at the masthead (Rule 25(b))</p>
+                                        </div>
+                                    </article>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="category">
+                            <button class="category-header accordion-header">
+                                <span>Fishing Vessels</span>
+                                <span class="accordion-icon">▼</span>
+                            </button>
+                            <div class="category-content accordion-content">
+                                <div class="accordion-body">
+                                    <article class="light-card">
+                                        <h3>Vessel Engaged in Trawling</h3>
+                                        <div class="light-diagrams">
+                                            <div class="diagram">
+                                                <h4>Front</h4>
+                                                <img data-diagram="vessel-engaged-in-trawling-front" alt="Vessel Engaged in Trawling - Front View" class="light-diagram-img" loading="lazy">
+                                            </div>
+                                            <div class="diagram">
+                                                <h4>Port</h4>
+                                                <img data-diagram="vessel-engaged-in-trawling-starboard" alt="Vessel Engaged in Trawling - Port View" class="light-diagram-img" loading="lazy">
+                                            </div>
+                                            <div class="diagram">
+                                                <h4>Aft</h4>
+                                                <img data-diagram="vessel-engaged-in-trawling-aft" alt="Vessel Engaged in Trawling - Aft View" class="light-diagram-img" loading="lazy">
+                                            </div>
+                                        </div>
+                                        <div class="light-description">
+                                            <p><strong>Configuration:</strong> GREEN all-round light OVER white all-round light (both 360°), plus sidelights and stern light when making way through the water</p>
+                                            <p><strong>When Displayed:</strong> Vessel engaged in trawling - dragging a dredge net or other apparatus through the water (Rule 26(b))</p>
+                                            <p><strong>Key Distinction:</strong> GREEN OVER WHITE distinguishes trawling from other fishing methods (other fishing = RED OVER WHITE). "Green for trawl" is the memory aid.</p>
+                                            <p><strong>Additional Signals:</strong></p>
+                                            <ul class="content-nested-list">
+                                                <li>If making way: display sidelights and stern light</li>
+                                                <li>If vessel >50m: may show white all-round light above green light</li>
+                                                <li>Optional: white all-round light(s) showing direction of outlying gear >150m</li>
+                                                <li>By day: shape of two cones apex together (vessel <20m not required)</li>
+                                            </ul>
+                                            <p><strong>Visibility:</strong> All-round lights 2 NM minimum</p>
+                                        </div>
+                                    </article>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="category">
+                            <button class="category-header accordion-header">
+                                <span>Vessels Towing or Pushing</span>
+                                <span class="accordion-icon">▼</span>
+                            </button>
+                            <div class="category-content accordion-content">
+                                <div class="accordion-body">
+                                    <article class="light-card">
+                                        <h3>Vessel Towing (Length of Tow Exceeds 200m)</h3>
+                                        <div class="light-diagrams">
+                                            <div class="diagram">
+                                                <h4>Front</h4>
+                                                <img data-diagram="vessel-towing-200m-front" alt="Vessel Towing >200m - Front View" class="light-diagram-img" loading="lazy">
+                                            </div>
+                                            <div class="diagram">
+                                                <h4>Port</h4>
+                                                <img data-diagram="vessel-towing-200m-starboard" alt="Vessel Towing >200m - Port View" class="light-diagram-img" loading="lazy">
+                                            </div>
+                                            <div class="diagram">
+                                                <h4>Aft</h4>
+                                                <img data-diagram="vessel-towing-200m-aft" alt="Vessel Towing >200m - Aft View" class="light-diagram-img" loading="lazy">
+                                            </div>
+                                        </div>
+                                        <div class="light-description">
+                                            <p><strong>Configuration:</strong> THREE white masthead lights in a vertical line, sidelights, yellow towing light above white stern light</p>
+                                            <p><strong>When Displayed:</strong> Vessel towing when length of tow from stern of towing vessel to after end of tow EXCEEDS 200 meters (Rule 24(a)(i))</p>
+                                            <p><strong>Key Features:</strong></p>
+                                            <ul class="content-nested-list">
+                                                <li>3 white masthead lights indicate tow >200m (2 lights if tow ≤200m)</li>
+                                                <li>Yellow towing light has same characteristics as stern light (135° arc)</li>
+                                                <li>Yellow light positioned vertically above stern light</li>
+                                                <li>Towed vessel displays sidelights and stern light</li>
+                                                <li>Diamond shape displayed by day when tow >200m</li>
+                                            </ul>
+                                            <p><strong>Visibility:</strong> Masthead lights 5 NM, yellow towing light 2 NM</p>
+                                        </div>
+                                    </article>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="category">
+                            <button class="category-header accordion-header">
+                                <span>Vessels Not Under Command</span>
+                                <span class="accordion-icon">▼</span>
+                            </button>
+                            <div class="category-content accordion-content">
+                                <div class="accordion-body">
+                                    <article class="light-card">
+                                        <h3>Vessel Not Under Command</h3>
+                                        <div class="light-diagrams">
+                                            <div class="diagram">
+                                                <h4>Front</h4>
+                                                <img data-diagram="vessel-not-under-command-front" alt="Vessel Not Under Command - Front View" class="light-diagram-img" loading="lazy">
+                                            </div>
+                                            <div class="diagram">
+                                                <h4>Port</h4>
+                                                <img data-diagram="vessel-not-under-command-starboard" alt="Vessel Not Under Command - Port View" class="light-diagram-img" loading="lazy">
+                                            </div>
+                                            <div class="diagram">
+                                                <h4>Aft</h4>
+                                                <img data-diagram="vessel-not-under-command-aft" alt="Vessel Not Under Command - Aft View" class="light-diagram-img" loading="lazy">
+                                            </div>
+                                        </div>
+                                        <div class="light-description">
+                                            <p><strong>Configuration:</strong> TWO red all-round lights in vertical line (360° visibility). NO masthead, sidelights, or stern lights unless making way.</p>
+                                            <p><strong>When Displayed:</strong> Vessel not under command - unable to maneuver as required by COLREGS due to exceptional circumstances (Rule 27(a))</p>
+                                            <p><strong>Definition:</strong> A vessel which through some exceptional circumstance (breakdown, damage, or other malfunction) is unable to maneuver and therefore cannot keep out of the way of another vessel.</p>
+                                            <p><strong>Examples:</strong></p>
+                                            <ul class="content-nested-list">
+                                                <li>Main engine failure or breakdown</li>
+                                                <li>Steering gear failure</li>
+                                                <li>Damage to propulsion or steering systems</li>
+                                                <li>Loss of power</li>
+                                            </ul>
+                                            <p><strong>Additional Signals:</strong></p>
+                                            <ul class="content-nested-list">
+                                                <li>If making way through water: also display sidelights and stern light</li>
+                                                <li>By day: two black balls in vertical line</li>
+                                            </ul>
+                                            <p><strong>Priority:</strong> NUC vessels have right of way over all other vessels except vessels constrained by draft in narrow channels. All vessels must keep clear of a NUC vessel.</p>
+                                            <p><strong>Visibility:</strong> Red all-round lights 2 NM minimum</p>
+                                        </div>
+                                    </article>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="category">
+                            <button class="category-header accordion-header">
+                                <span>Vessels Restricted in Ability to Maneuver</span>
+                                <span class="accordion-icon">▼</span>
+                            </button>
+                            <div class="category-content accordion-content">
+                                <div class="accordion-body">
+                                    <article class="light-card">
+                                        <h3>Vessel Restricted in Ability to Maneuver</h3>
+                                        <div class="light-diagrams">
+                                            <div class="diagram">
+                                                <h4>Front</h4>
+                                                <img data-diagram="vessel-restricted-in-ability-to-maneuver-front" alt="Vessel Restricted in Ability to Maneuver - Front View" class="light-diagram-img" loading="lazy">
+                                            </div>
+                                            <div class="diagram">
+                                                <h4>Port</h4>
+                                                <img data-diagram="vessel-restricted-in-ability-to-maneuver-starboard" alt="Vessel Restricted in Ability to Maneuver - Port View" class="light-diagram-img" loading="lazy">
+                                            </div>
+                                            <div class="diagram">
+                                                <h4>Aft</h4>
+                                                <img data-diagram="vessel-restricted-in-ability-to-maneuver-aft" alt="Vessel Restricted in Ability to Maneuver - Aft View" class="light-diagram-img" loading="lazy">
+                                            </div>
+                                        </div>
+                                        <div class="light-description">
+                                            <p><strong>Configuration:</strong> RED-WHITE-RED all-round lights in vertical line (360° visibility), plus normal navigation lights when making way</p>
+                                            <p><strong>When Displayed:</strong> Vessel restricted in ability to maneuver due to the nature of her work (Rule 27(b))</p>
+                                            <p><strong>Examples of RAM Vessels:</strong></p>
+                                            <ul class="content-nested-list">
+                                                <li>Laying, servicing, or picking up navigation marks, submarine cables, or pipelines</li>
+                                                <li>Dredging operations</li>
+                                                <li>Underwater operations (diving, etc.)</li>
+                                                <li>Replenishment or transferring persons, provisions, or cargo while underway</li>
+                                                <li>Launching or recovering aircraft</li>
+                                                <li>Mine clearance operations</li>
+                                            </ul>
+                                            <p><strong>Additional Signals:</strong></p>
+                                            <ul class="content-nested-list">
+                                                <li>If making way: masthead light(s), sidelights, and stern light</li>
+                                                <li>Optional: Green all-round lights on safe side, Red all-round lights on obstructed side</li>
+                                                <li>By day: ball-diamond-ball shape in vertical line</li>
+                                            </ul>
+                                            <p><strong>Meaning:</strong> Other vessels must keep clear; this vessel cannot maneuver easily due to her work</p>
+                                            <p><strong>Visibility:</strong> All-round lights 2 NM minimum</p>
+                                        </div>
+                                    </article>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="category">
+                            <button class="category-header accordion-header">
+                                <span>Vessels Constrained by Draught</span>
+                                <span class="accordion-icon">▼</span>
+                            </button>
+                            <div class="category-content accordion-content">
+                                <div class="accordion-body">
+                                    <article class="light-card">
+                                        <h3>Vessel Constrained by Draught</h3>
+                                        <div class="light-diagrams">
+                                            <div class="diagram">
+                                                <h4>Front</h4>
+                                                <img data-diagram="vessel-constrained-by-draught-front" alt="Vessel Constrained by Draught - Front View" class="light-diagram-img" loading="lazy">
+                                            </div>
+                                            <div class="diagram">
+                                                <h4>Port</h4>
+                                                <img data-diagram="vessel-constrained-by-draught-starboard" alt="Vessel Constrained by Draught - Port View" class="light-diagram-img" loading="lazy">
+                                            </div>
+                                            <div class="diagram">
+                                                <h4>Aft</h4>
+                                                <img data-diagram="vessel-constrained-by-draught-aft" alt="Vessel Constrained by Draught - Aft View" class="light-diagram-img" loading="lazy">
+                                            </div>
+                                        </div>
+                                        <div class="light-description">
+                                            <p><strong>Configuration:</strong> Full power-driven vessel lights (Rule 23: masthead light(s), sidelights, stern light) PLUS three all-round red lights in a vertical line where they can best be seen (360° visibility). By day: a black cylinder.</p>
+                                            <p><strong>When Displayed:</strong> Power-driven vessel whose draught in relation to available depth and width of water severely restricts her ability to deviate from her course (Rule 28)</p>
+                                            <p><strong>Definition (Rule 3(h)):</strong> A power-driven vessel which, because of her draught in relation to the available depth and width of navigable water, is severely restricted in her ability to deviate from the course she is following.</p>
+                                            <p><strong>Rule 28 Summary:</strong></p>
+                                            <ul class="content-nested-list">
+                                                <li>May exhibit three all-round red lights in a vertical line (optional signal)</li>
+                                                <li>Or a cylinder (day shape)</li>
+                                                <li>Displayed in addition to lights prescribed for power-driven vessels in Rule 23</li>
+                                                <li>Exhibited where they can best be seen</li>
+                                            </ul>
+                                            <p><strong>Key Distinction:</strong> Three red lights (vs two for NUC or aground). This vessel is underway and displays full navigation lights plus the three red lights. The cylinder day shape (black, diameter at least 0.6m, height twice diameter) distinguishes from other vessel types.</p>
+                                            <p><strong>Priority (Rule 18(d)):</strong> Other vessels shall, if circumstances admit, avoid impeding the safe passage of a vessel constrained by her draught. The constrained vessel shall navigate with particular caution.</p>
+                                            <p><strong>Visibility:</strong> Masthead/sidelights/stern as per Rule 23; red all-round lights 2 NM minimum</p>
+                                        </div>
+                                    </article>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="category">
+                            <button class="category-header accordion-header">
+                                <span>Vessels Aground</span>
+                                <span class="accordion-icon">▼</span>
+                            </button>
+                            <div class="category-content accordion-content">
+                                <div class="accordion-body">
+                                    <article class="light-card">
+                                        <h3>Vessel Aground</h3>
+                                        <div class="light-diagrams">
+                                            <div class="diagram">
+                                                <h4>Front</h4>
+                                                <img data-diagram="vessel-aground-front" alt="Vessel Aground - Front View" class="light-diagram-img" loading="lazy">
+                                            </div>
+                                            <div class="diagram">
+                                                <h4>Port</h4>
+                                                <img data-diagram="vessel-aground-starboard" alt="Vessel Aground - Port View" class="light-diagram-img" loading="lazy">
+                                            </div>
+                                            <div class="diagram">
+                                                <h4>Aft</h4>
+                                                <img data-diagram="vessel-aground-aft" alt="Vessel Aground - Aft View" class="light-diagram-img" loading="lazy">
+                                            </div>
+                                        </div>
+                                        <div class="light-description">
+                                            <p><strong>Configuration:</strong> Anchor lights (fore and stern white all-round lights) PLUS two red all-round lights in a vertical line (360° visibility). By day: three black balls in a vertical line in addition to anchor ball(s).</p>
+                                            <p><strong>When Displayed:</strong> Vessel aground - unable to move due to touching the bottom (Rule 30(d))</p>
+                                            <p><strong>Rule 30(d) Summary:</strong></p>
+                                            <ul class="content-nested-list">
+                                                <li>(i) Two all-round red lights in a vertical line</li>
+                                                <li>(ii) Three black balls in a vertical line (day shape)</li>
+                                                <li>Displayed in addition to the normal anchor lights prescribed in Rule 30(a) and (b)</li>
+                                            </ul>
+                                            <p><strong>Key Distinction:</strong> A vessel aground shows the same two red lights as a vessel not under command (NUC), but an aground vessel ALSO displays anchor lights (white). A NUC vessel does not display anchor lights unless at anchor. The three balls by day distinguish aground from NUC (NUC uses two balls).</p>
+                                            <p><strong>Exemption:</strong> A vessel of less than 12 metres in length when aground need not exhibit the red lights and three balls (Rule 30(f))</p>
+                                            <p><strong>Visibility:</strong> Anchor lights as per Rule 30; red all-round lights 2 NM minimum</p>
+                                        </div>
+                                    </article>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-section active" id="flags-signals-section">
+                    <div class="content-header">
+                        <h1>International Maritime Signal Flags</h1>
+                        <p class="subtitle">Each flag represents a letter. Meanings differ between International Code (merchant/marine) and NATO (naval) usage.</p>
+                    </div>
+
+                    <div class="flags-grid" id="flagsGrid">
+                        <!-- Flags dynamically populated -->
+                    </div>
+                </div>
+
+                <div class="content-section" id="shapes-section">
+                    <div class="content-header">
+                        <h1>Ship Day Shapes (Day Signals)</h1>
+                        <p class="section-intro">Daytime signals used by vessels to indicate their status or activity.</p>
+                    </div>
+                    
+                    <div class="shapes-grid">
+                        <!-- Ball -->
+                        <div class="shape-card">
+                            <div class="shape-visual">
+                                <img width="100" height="100" src="reference/Photos/Day shapes reference sheet/01_ball_anchor.jpg" alt="Ball shape" class="shape-img" loading="lazy">
+                            </div>
+                            <h3>Ball</h3>
+                            <p class="shape-meaning"><strong>Indicates:</strong> Vessel at anchor (Rule 30)</p>
+                            <p class="shape-description">Black sphere, diameter at least 0.6 meters. Displayed in the forepart where it can best be seen.</p>
+                        </div>
+                        
+                        <!-- Cone -->
+                        <div class="shape-card">
+                            <div class="shape-visual">
+                                <img width="100" height="100" src="reference/Photos/Day shapes reference sheet/02_cone_apex_down.jpg" alt="Cone shape" class="shape-img" loading="lazy">
+                            </div>
+                            <h3>Cone</h3>
+                            <p class="shape-meaning"><strong>Indicates:</strong> Sailing vessel proceeding under sail and also being propelled by machinery (Rule 25)</p>
+                            <p class="shape-description">Black cone, apex downward, base diameter at least 0.6m. Displayed forward where it can best be seen.</p>
+                        </div>
+                        
+                        <!-- Diamond -->
+                        <div class="shape-card">
+                            <div class="shape-visual">
+                                <img width="100" height="100" src="reference/Photos/Day shapes reference sheet/03_diamond.jpg" alt="Diamond shape" class="shape-img" loading="lazy">
+                            </div>
+                            <h3>Diamond</h3>
+                            <p class="shape-meaning"><strong>Indicates:</strong> Vessel towing where length of tow exceeds 200 meters (Rule 24)</p>
+                            <p class="shape-description">Black diamond shape, at least 0.6m diameter. Displayed where it can best be seen by both towing and towed vessel.</p>
+                        </div>
+                        
+                        <!-- Two cones apex together -->
+                        <div class="shape-card">
+                            <div class="shape-visual">
+                                <img width="100" height="100" src="reference/Photos/Day shapes reference sheet/04_two_cones_apex_together.jpg" alt="Two cones apex together" class="shape-img" loading="lazy">
+                            </div>
+                            <h3>Two Cones Apex Together</h3>
+                            <p class="shape-meaning"><strong>Indicates:</strong> Vessel engaged in fishing with restricted ability to maneuver (Rule 26)</p>
+                            <p class="shape-description">Two black cones with apexes together. Base diameter at least 0.6m each. Displayed where they can best be seen.</p>
+                        </div>
+                        
+                        <!-- Cylinder -->
+                        <div class="shape-card">
+                            <div class="shape-visual">
+                                <img width="100" height="100" src="reference/Photos/Day shapes reference sheet/08_cylinder.jpg" alt="Cylinder shape" class="shape-img" loading="lazy">
+                            </div>
+                            <h3>Cylinder</h3>
+                            <p class="shape-meaning"><strong>Indicates:</strong> Vessel constrained by her draught (Rule 28)</p>
+                            <p class="shape-description">Black cylinder, diameter at least 0.6m, height twice its diameter. Displayed where it can best be seen.</p>
+                        </div>
+                        
+                        <!-- Two Balls -->
+                        <div class="shape-card">
+                            <div class="shape-visual">
+                                <img width="100" height="100" src="reference/Photos/Day shapes reference sheet/05_two_balls.jpg" alt="Two balls shape" class="shape-img" loading="lazy">
+                            </div>
+                            <h3>Two Balls (Vertical)</h3>
+                            <p class="shape-meaning"><strong>Indicates:</strong> Vessel not under command (Rule 27)</p>
+                            <p class="shape-description">Two black balls in vertical line. Indicates vessel unable to maneuver as required by the rules due to exceptional circumstance.</p>
+                        </div>
+                        
+                        <!-- Three balls triangle (mine clearance) -->
+                        <div class="shape-card">
+                            <div class="shape-visual">
+                                <img width="100" height="100" src="reference/Photos/Day shapes reference sheet/06_mine_clearance_triangle.jpg" alt="Three balls in triangle" class="shape-img" loading="lazy">
+                            </div>
+                            <h3>Three Balls (Triangle)</h3>
+                            <p class="shape-meaning"><strong>Indicates:</strong> Vessel engaged in mine clearance operations (Rule 27(f))</p>
+                            <p class="shape-description">Three black balls in a triangle: one at or near the foremast head and one at each end of the fore yard.</p>
+                        </div>
+                        
+                        <!-- Ball-Diamond-Ball -->
+                        <div class="shape-card">
+                            <div class="shape-visual">
+                                <img width="100" height="100" src="reference/Photos/Day shapes reference sheet/07_ball_diamond_ball.jpg" alt="Ball-diamond-ball shape" class="shape-img" loading="lazy">
+                            </div>
+                            <h3>Ball-Diamond-Ball</h3>
+                            <p class="shape-meaning"><strong>Indicates:</strong> Vessel restricted in her ability to maneuver (Rule 27)</p>
+                            <p class="shape-description">Vertical arrangement: ball (top), diamond (middle), ball (bottom). Indicates vessel restricted by nature of her work.</p>
+                        </div>
+                        
+                        <!-- Three balls vertical (aground) -->
+                        <div class="shape-card">
+                            <div class="shape-visual">
+                                <img width="100" height="100" src="reference/Photos/Day shapes reference sheet/09_three_balls_vertical.jpg" alt="Three balls vertical" class="shape-img" loading="lazy">
+                            </div>
+                            <h3>Three Balls (Vertical)</h3>
+                            <p class="shape-meaning"><strong>Indicates:</strong> Vessel aground (Rule 30(d))</p>
+                            <p class="shape-description">Three black balls in a vertical line. Displayed in addition to anchor balls where they can best be seen.</p>
+                        </div>
+                        
+                        <!-- Dredging/underwater ops -->
+                        <div class="shape-card">
+                            <div class="shape-visual">
+                                <img width="100" height="100" src="reference/Photos/Day shapes reference sheet/10_dredging_underwater_ops.png" alt="Dredging or underwater operations" class="shape-img" loading="lazy">
+                            </div>
+                            <h3>Dredging/Underwater Ops</h3>
+                            <p class="shape-meaning"><strong>Indicates:</strong> Vessel engaged in dredging or underwater operations (Rule 27(d))</p>
+                            <p class="shape-description">Centre: ball-diamond-ball (restricted in ability to maneuver). Two diamonds vertical on safe side to pass; two balls vertical on obstructed/danger side.</p>
+                        </div>
+                        
+                        <!-- Fishing with outlying gear -->
+                        <div class="shape-card">
+                            <div class="shape-visual">
+                                <img width="100" height="100" src="reference/Photos/Day shapes reference sheet/11_fishing_outlying_gear.jpg" alt="Fishing with outlying gear" class="shape-img" loading="lazy">
+                            </div>
+                            <h3>Fishing with Outlying Gear</h3>
+                            <p class="shape-meaning"><strong>Indicates:</strong> Vessel engaged in fishing with gear extending more than 150m (Rule 26(c))</p>
+                            <p class="shape-description">Two cones apex together plus one cone apex toward the outlying gear. Displayed where they can best be seen.</p>
+                        </div>
+                        
+                        <!-- Two diamonds -->
+                        <div class="shape-card">
+                            <div class="shape-visual">
+                                <img width="100" height="100" src="reference/Photos/Day shapes reference sheet/12_two_diamonds.jpg" alt="Two diamonds" class="shape-img" loading="lazy">
+                            </div>
+                            <h3>Two Diamonds</h3>
+                            <p class="shape-meaning"><strong>Indicates:</strong> Safe side to pass a vessel restricted in ability to maneuver (Rule 27(d)(ii))</p>
+                            <p class="shape-description">Two black diamonds in a vertical line. Displayed on the side on which it is safe for other vessels to pass.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-section" id="buoys-section">
+                    <div class="content-header">
+                        <h1>Buoys</h1>
+                        <p class="subtitle">Navigation buoys mark channels, hazards, and safe water. The IALA Maritime Buoyage System provides a unified system worldwide.</p>
+                    </div>
+
+                    <div class="vessel-categories">
+                        <div class="category">
+                            <button class="category-header accordion-header">
+                                <span>Lateral Marks</span>
+                                <span class="accordion-icon">▼</span>
+                            </button>
+                            <div class="category-content accordion-content">
+                                <div class="accordion-body">
+                                    <div class="lateral-marks-header">
+                                        <h3>Lateral Marks</h3>
+                                        <div class="region-toggle" role="group" aria-label="Select IALA region" data-active="a">
+                                            <span class="region-slider" aria-hidden="true"></span>
+                                            <button type="button" class="region-btn active" data-region="a" aria-pressed="true">Region A</button>
+                                            <button type="button" class="region-btn" data-region="b" aria-pressed="false">Region B</button>
+                                        </div>
+                                    </div>
+
+                                    <div class="lateral-marks-content lateral-marks-region-a" data-region="a">
+                                        <article class="light-card">
+                                            <div class="buoy-subsection">
+                                                <h4>Purpose</h4>
+                                                <div class="light-description">
+                                                    <p class="subsection-desc">Lateral markers are used for well-defined channels in conjunction with a conventional direction of buoyage. They indicate the port and starboard sides of the route to be followed.</p>
+                                                </div>
+                                            </div>
+                                            <div class="light-diagrams">
+                                                <div class="diagram">
+                                                    <h4>Port</h4>
+                                                    <img src="reference/Photos/Bouys/Lateral-Marker-Port-Region-A.png" alt="Lateral mark - port (Region A)" class="light-diagram-img buoy-img" loading="lazy">
+                                                </div>
+                                                <div class="diagram">
+                                                    <h4>Starboard</h4>
+                                                    <img src="reference/Photos/Bouys/Lateral-Marker-Starboard-Region-A.png" alt="Lateral mark - starboard (Region A)" class="light-diagram-img buoy-img" loading="lazy">
+                                                </div>
+                                            </div>
+
+                                            <div class="buoy-subsection">
+                                                <h4>Lights</h4>
+                                                <div class="light-description">
+                                                    <p class="subsection-desc">When fitted, may have any rhythm other than composite group flashings (2+1), which are used on modified lateral markers to indicate a preferred channel. For example:</p>
+                                                </div>
+                                                <div class="light-diagrams">
+                                                    <div class="diagram">
+                                                        <img src="reference/Photos/Bouys/Region-A-Lateral-markers-lights.jpeg" alt="Lateral mark lights (Region A)" class="light-diagram-img buoy-img" loading="lazy">
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="buoy-subsection">
+                                                <h4>Preferred channel markers</h4>
+                                                <div class="light-description">
+                                                    <p class="subsection-desc">Preferred channel markers are red and green horizontally banded buoys used at channel junctions to indicate the main, deeper, or preferred route. The top band color indicates the preferred channel side.</p>
+                                                </div>
+                                                <div class="light-diagrams">
+                                                    <div class="diagram">
+                                                        <h4>Port preferred</h4>
+                                                        <img src="reference/Photos/Bouys/Lateral-Marker-Port-Perferred-Region-A.png" alt="Port preferred channel marker (Region A)" class="light-diagram-img buoy-img" loading="lazy">
+                                                    </div>
+                                                    <div class="diagram">
+                                                        <h4>Starboard preferred</h4>
+                                                        <img src="reference/Photos/Bouys/Lateral-Marker-Starboard-Perferred-Region-A.png" alt="Starboard preferred channel marker (Region A)" class="light-diagram-img buoy-img" loading="lazy">
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="buoy-subsection">
+                                                <h4>Lights</h4>
+                                                <div class="light-description">
+                                                    <p class="subsection-desc">Composite group flashing (2+1) indicates a preferred channel. Red (2+1) = port preferred; green (2+1) = starboard preferred.</p>
+                                                </div>
+                                                <div class="light-diagrams">
+                                                    <div class="diagram">
+                                                        <img src="reference/Photos/Bouys/Region-A-preferred-Lateral-markers-lights.jpeg" alt="Preferred channel marker lights (Region A)" class="light-diagram-img buoy-img" loading="lazy">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </article>
+                                    </div>
+
+                                    <div class="lateral-marks-content lateral-marks-region-b hidden" data-region="b">
+                                        <article class="light-card">
+                                            <div class="buoy-subsection">
+                                                <h4>Purpose</h4>
+                                                <div class="light-description">
+                                                    <p class="subsection-desc">Lateral markers are used for well-defined channels in conjunction with a conventional direction of buoyage. In Region B, green marks port side and red marks starboard when entering from seaward.</p>
+                                                </div>
+                                            </div>
+                                            <div class="light-diagrams">
+                                                <div class="diagram">
+                                                    <h4>Port</h4>
+                                                    <img src="reference/Photos/Bouys/Lateral-Marker-Port-Region-B.png" alt="Lateral mark - port (Region B)" class="light-diagram-img buoy-img" loading="lazy">
+                                                </div>
+                                                <div class="diagram">
+                                                    <h4>Starboard</h4>
+                                                    <img src="reference/Photos/Bouys/Lateral-Marker-Starboard-Region-B.png" alt="Lateral mark - starboard (Region B)" class="light-diagram-img buoy-img" loading="lazy">
+                                                </div>
+                                            </div>
+
+                                            <div class="buoy-subsection">
+                                                <h4>Lights</h4>
+                                                <div class="light-description">
+                                                    <p class="subsection-desc">When fitted, may have any rhythm other than composite group flashings (2+1), which are used on modified lateral markers to indicate a preferred channel. For example:</p>
+                                                </div>
+                                                <div class="light-diagrams">
+                                                    <div class="diagram">
+                                                        <img src="reference/Photos/Bouys/Region-B-Lateral-markers-lights.jpeg" alt="Lateral mark lights (Region B)" class="light-diagram-img buoy-img" loading="lazy">
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="buoy-subsection">
+                                                <h4>Preferred channel markers</h4>
+                                                <div class="light-description">
+                                                    <p class="subsection-desc">Preferred channel markers are red and green horizontally banded buoys used at channel junctions to indicate the main, deeper, or preferred route. The top band color indicates the preferred channel side.</p>
+                                                </div>
+                                                <div class="light-diagrams">
+                                                    <div class="diagram">
+                                                        <h4>Port preferred</h4>
+                                                        <img src="reference/Photos/Bouys/Lateral-Marker-Port-Perferred-Region-B.png" alt="Port preferred channel marker (Region B)" class="light-diagram-img buoy-img" loading="lazy">
+                                                    </div>
+                                                    <div class="diagram">
+                                                        <h4>Starboard preferred</h4>
+                                                        <img src="reference/Photos/Bouys/Lateral-Marker-Starboard-Perferred-Region-B.png" alt="Starboard preferred channel marker (Region B)" class="light-diagram-img buoy-img" loading="lazy">
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="buoy-subsection">
+                                                <h4>Lights</h4>
+                                                <div class="light-description">
+                                                    <p class="subsection-desc">Composite group flashing (2+1) indicates a preferred channel. Green (2+1) = port preferred; red (2+1) = starboard preferred.</p>
+                                                </div>
+                                                <div class="light-diagrams">
+                                                    <div class="diagram">
+                                                        <img src="reference/Photos/Bouys/Region-B-preferred-Lateral-markers-lights.jpeg" alt="Preferred channel marker lights (Region B)" class="light-diagram-img buoy-img" loading="lazy">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </article>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="category">
+                            <button class="category-header accordion-header">
+                                <span>Cardinal Marks</span>
+                                <span class="accordion-icon">▼</span>
+                            </button>
+                            <div class="category-content accordion-content">
+                                <div class="accordion-body">
+                                    <article class="light-card">
+                                        <h3>Cardinal Marks</h3>
+                                        <div class="light-diagrams">
+                                            <div class="diagram">
+                                                <img src="reference/Photos/Bouys/Cardinal-Markers.png" alt="Cardinal mark" class="light-diagram-img buoy-img" loading="lazy">
+                                            </div>
+                                        </div>
+                                        <div class="light-description">
+                                            <p><strong>Purpose:</strong> Indicate the compass direction of safe water relative to the mark (North, East, South, West).</p>
+                                        </div>
+                                    </article>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="category">
+                            <button class="category-header accordion-header">
+                                <span>Isolated Danger Marks</span>
+                                <span class="accordion-icon">▼</span>
+                            </button>
+                            <div class="category-content accordion-content">
+                                <div class="accordion-body">
+                                    <article class="light-card">
+                                        <h3>Isolated Danger Marks</h3>
+                                        <div class="light-diagrams">
+                                            <div class="diagram">
+                                                <img src="reference/Photos/Bouys/Isolated-Danger-Marks.png" alt="Isolated danger mark" class="light-diagram-img buoy-img" loading="lazy">
+                                            </div>
+                                        </div>
+                                        <div class="light-description">
+                                            <p><strong>Purpose:</strong> Mark a hazard with navigable water all around.</p>
+                                        </div>
+                                    </article>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="category">
+                            <button class="category-header accordion-header">
+                                <span>Safe Water Marks</span>
+                                <span class="accordion-icon">▼</span>
+                            </button>
+                            <div class="category-content accordion-content">
+                                <div class="accordion-body">
+                                    <article class="light-card">
+                                        <h3>Safe Water Marks</h3>
+                                        <div class="light-diagrams">
+                                            <div class="diagram">
+                                                <img src="reference/Photos/Bouys/Safe-Water-Marks.png" alt="Safe water mark" class="light-diagram-img buoy-img" loading="lazy">
+                                            </div>
+                                        </div>
+                                        <div class="light-description">
+                                            <p><strong>Purpose:</strong> Indicate the approach to a fairway or mid-channel.</p>
+                                        </div>
+                                    </article>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="category">
+                            <button class="category-header accordion-header">
+                                <span>Special Marks</span>
+                                <span class="accordion-icon">▼</span>
+                            </button>
+                            <div class="category-content accordion-content">
+                                <div class="accordion-body">
+                                    <article class="light-card">
+                                        <h3>Special Marks</h3>
+                                        <div class="light-diagrams">
+                                            <div class="diagram">
+                                                <img src="reference/Photos/Bouys/Special-Marks.png" alt="Special mark" class="light-diagram-img buoy-img" loading="lazy">
+                                            </div>
+                                        </div>
+                                        <div class="light-description">
+                                            <p><strong>Purpose:</strong> Indicate areas or features such as traffic separation schemes, spoil grounds, or military exercise zones.</p>
+                                        </div>
+                                    </article>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="category">
+                            <button class="category-header accordion-header">
+                                <span>Emergency Wreck Marking Buoy</span>
+                                <span class="accordion-icon">▼</span>
+                            </button>
+                            <div class="category-content accordion-content">
+                                <div class="accordion-body">
+                                    <article class="light-card">
+                                        <h3>Emergency Wreck Marking Buoy</h3>
+                                        <div class="light-diagrams">
+                                            <div class="diagram">
+                                                <img src="reference/Photos/Bouys/Emergancy-Bouy-Marks.jpg" alt="Emergency wreck marking buoy" class="light-diagram-img buoy-img" loading="lazy">
+                                            </div>
+                                        </div>
+                                        <div class="light-description">
+                                            <p><strong>Purpose:</strong> Temporary mark to warn of newly sunken vessels or maritime hazards not yet formally documented. Deployed for 24-72 hours after a wreck occurs, before being replaced with permanent markings.</p>
+                                            <p><strong>Identification:</strong> Pillar or spar shape; blue and yellow alternating vertical stripes; yellow "+" topmark if fitted; occulting alternating light. Often labelled "WRECK". No other navigation mark uses blue.</p>
+                                        </div>
+                                    </article>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-section" id="iala-section">
+                    <div class="content-header">
+                        <h1>IALA Maritime Buoyage System</h1>
+                        <p class="subtitle">International Association of Marine Aids to Navigation and Lighthouse Authorities (IALA) divides the world into two regions with different lateral mark colours.</p>
+                    </div>
+                    <div class="iala-content">
+                        <div class="iala-map-wrapper">
+                            <img src="reference/Photos/IALA/IALA%20MAP.png" alt="IALA Region A and Region B world map showing buoyage zones" class="iala-map-img" loading="lazy">
+                        </div>
+                        <div class="iala-notes">
+                            <p><strong>Region A:</strong> Red buoys mark port side when entering from seaward. Europe, Africa, Gulf, most of Asia, Australia, New Zealand, Indian Ocean, South Atlantic, Western Pacific.</p>
+                            <p><strong>Region B:</strong> Green buoys mark port side when entering from seaward. Americas, Caribbean, Japan, Korea, Philippines, North and Central Pacific. With a Western Pacific Region B enclave around Japan, Korea, and Philippines.</p>
+                            <p><strong>Key boundaries:</strong> Atlantic boundary approximately 20°W; Pacific boundaries along the Date Line (180°) and 120°W meridian.</p>
+                            <p><strong>Note:</strong> Cardinal marks, isolated danger, safe water, and special marks are identical in both regions.</p>
+                        </div>
+                        <div class="iala-chart-examples">
+                            <h3>Chart examples</h3>
+                            <div class="iala-chart-grid">
+                                <figure class="iala-chart-item">
+                                    <figcaption>Region A</figcaption>
+                                    <img src="reference/Photos/IALA/A%20region.jpeg" alt="Region A buoyage as shown on a chart" class="iala-chart-img" loading="lazy">
+                                </figure>
+                                <figure class="iala-chart-item">
+                                    <figcaption>Region B</figcaption>
+                                    <img src="reference/Photos/IALA/B%20region.jpeg" alt="Region B buoyage as shown on a chart" class="iala-chart-img" loading="lazy">
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-container">
+            <p>&copy; 2026 COLREGS Learning Portal. All rights reserved.</p>
+            <nav class="footer-nav" aria-label="Footer navigation">
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </div>
+    </footer>
+
+    <script src="scripts/main.js" defer></script>
+    <script src="scripts/lights-signals.js" defer></script>
+</body>
+</html>
+
